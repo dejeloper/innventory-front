@@ -1,6 +1,6 @@
 import { MoreHorizontal } from "lucide-react";
 import { SidebarButton } from "./sidebar-button";
-import { ModeToggle } from "../theme-toggle-button";
+import { ModeToggle } from "../../theme-toggle-button";
 
 export const SidebarExtra = () => (
   <div className="flex flex-col gap-2">
