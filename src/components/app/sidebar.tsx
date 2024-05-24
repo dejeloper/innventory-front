@@ -1,13 +1,21 @@
 "use client";
+import { SidebarItems } from "@/interfaces/types";
+import { SidebarExtra } from "./sidebar-extra";
 import { SidebarDesktop } from "./sidebar-desktop";
 import { sidebarItems } from "@/data/sidebar-items";
-import { SidebarExtra } from "./sidebar-extra";
-import { SidebarItems } from "@/interfaces/types";
+import { useMediaQuery } from "usehooks-ts";
+import { SidebarMobile } from "./sidebar-mobile";
 
 export function Sidebar() {
   const items: SidebarItems = {
     ...sidebarItems,
     extras: <SidebarExtra />,
   };
-  return <SidebarDesktop sidebarItems={items} />;
+
+  const isDesktop = useMediaQuery("min-width: 640px", {
+    initializeWithValue: false,
+  });
+
+  if (isDesktop) return <SidebarDesktop sidebarItems={items} />;
+  return <SidebarMobile sidebarItems={items} />;
 }
