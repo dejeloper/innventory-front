@@ -12,10 +12,13 @@ export function Sidebar() {
     extras: <SidebarExtra />,
   };
 
-  const isDesktop = useMediaQuery("min-width: 640px", {
+  const isDesktop = useMediaQuery("(min-width: 640px)", {
     initializeWithValue: false,
   });
 
-  if (isDesktop) return <SidebarDesktop sidebarItems={items} />;
+  if (isDesktop) {
+    return <SidebarDesktop sidebarItems={items} />;
+  }
+
   return <SidebarMobile sidebarItems={items} />;
 }
