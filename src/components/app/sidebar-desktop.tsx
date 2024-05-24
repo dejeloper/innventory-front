@@ -1,14 +1,16 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SidebarButton } from "./sidebar-button";
 import { SidebarItems } from "@/interfaces/types";
-import Link from "next/link";
-import { Separator } from "../ui/separator";
-import { Popover } from "../ui/popover";
-import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
-import { Button } from "../ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Separator } from "@/components/ui/separator";
 import { LogOut, MoreHorizontal, Settings } from "lucide-react";
-import path from "path";
-import { usePathname } from "next/navigation";
 
 interface SidebarDesktopProps {
   sidebarItems: SidebarItems;
