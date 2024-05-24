@@ -1,7 +1,7 @@
-import React from "react";
-import { Button, ButtonProps } from "../ui/button";
-import { LucideIcon } from "lucide-react";
+import { Button, ButtonProps } from "@/components/ui/button";
+import { SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { LucideIcon } from "lucide-react";
 
 interface SidebarButtonProps extends ButtonProps {
   icon?: LucideIcon;
@@ -22,5 +22,13 @@ export function SidebarButton({
       {Icon && <Icon size={20} />}
       <span> {children}</span>
     </Button>
+  );
+}
+
+export function SidebarButtonSheet(props: SidebarButtonProps) {
+  return (
+    <SheetClose asChild>
+      <SidebarButton {...props} />
+    </SheetClose>
   );
 }
