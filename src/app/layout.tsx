@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Sidebar } from "@/components/app/sidebar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning className="dark">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -34,10 +34,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="container mx-auto">
-            <Navbar />
-            {children}
-          </main>
+          <Sidebar />
+          <main className="ml-[300px] mt-3">{children}</main>
         </ThemeProvider>
       </body>
     </html>
