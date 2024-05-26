@@ -5,14 +5,14 @@ import { NavbarButton } from "./navbar.button";
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 w-full sm:ml-[270px] pl-16 sm:pl-0 h-16 border-b select-none z-0 bg-white">
-      <div className="flex h-full sm:w-[calc(100%-278px)] w-[calc(100%-12px)] justify-between items-center bg-white">
-        <div className="space-x-0 bg-white">
+    <nav className="fixed top-0 w-full sm:ml-[270px] pl-16 sm:pl-0 h-16 border-b select-none z-0 bg-background">
+      <div className="flex h-full sm:w-[calc(100%-278px)] w-[calc(100%-12px)] justify-between items-center">
+        <div className="space-x-0">
           <h3 className="text-2xl font-semibold text-foreground sm:hidden">
             Innventtory
           </h3>
         </div>
-        <div className="flex flex-row justify-center items-center space-x-0 gap-2 bg-white">
+        <div className="flex flex-row justify-center items-center space-x-0 gap-2">
           <div className="flex flex-row gap-1">
             <NavbarButton />
           </div>
