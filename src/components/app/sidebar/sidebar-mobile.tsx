@@ -25,13 +25,15 @@ export function SidebarMobile(props: SidebarDesktopProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-          size={"icon"}
-          variant={"ghost"}
-          className="fixed top-3 left-3 rounded-full"
-        >
-          <Menu size={20} />
-        </Button>
+        <div className="fixed top-0 left-0 bg-background border-b z-10">
+          <Button
+            size={"icon"}
+            variant={"ghost"}
+            className="fixed top-3 left-3 rounded-full"
+          >
+            <Menu size={20} />
+          </Button>
+        </div>
       </SheetTrigger>
       <SheetContent side={"left"} className="px-3 py-4" hideClose>
         <SheetHeader className="flex flex-row justify-between items-center space-y-0">
