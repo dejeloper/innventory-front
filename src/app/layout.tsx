@@ -4,6 +4,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Sidebar } from "@/components/app/sidebar/sidebar";
+import { Navbar } from "@/components/app/navbar/navbar";
+import { PageWrapper } from "@/components/app/page-wrapper/page-wrapper";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,7 +37,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Sidebar />
-          <main className="mx-5 mt-16 sm:ml-[300px] sm:mt-3">{children}</main>
+          <Navbar />
+          <PageWrapper>{children}</PageWrapper>
         </ThemeProvider>
       </body>
     </html>
