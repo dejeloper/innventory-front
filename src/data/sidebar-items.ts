@@ -1,50 +1,56 @@
 import { SidebarItems } from "@/interfaces/types";
 import {
   Box,
-  Home,
-  List,
-  ListChecks,
+  ContactRound,
+  LayoutDashboard,
+  ShoppingBag,
+  ShoppingBasket,
+  ShoppingCart,
+  SquareLibrary,
   Truck,
-  User,
-  UserCircle,
 } from "lucide-react";
 
 export const sidebarItems: SidebarItems = {
   links: [
     {
-      label: "Home",
-      href: "/",
-      icon: Home,
+      label: "Clientes",
+      href: "/item/customers",
+      icon: ContactRound,
     },
     {
-      label: "Products",
+      label: "Productos",
       href: "/item/products",
       icon: Box,
     },
     {
-      label: "Categories",
-      href: "/item/categories",
-      icon: List,
+      label: "POS",
+      href: "/item/pos",
+      icon: ShoppingBag,
     },
     {
-      label: "Suppliers",
-      href: "/item/suppliers",
+      label: "Ventas",
+      href: "/item/sales",
+      icon: ShoppingCart,
+    },
+    {
+      label: "Compras",
+      href: "/item/shopping",
+      icon: ShoppingBasket,
+    },
+    {
+      label: "Proveedores",
+      href: "/item/providers",
       icon: Truck,
     },
     {
-      label: "Customers",
-      href: "/item/customers",
-      icon: UserCircle,
+      label: "Administración",
+      href: "/item/Admin",
+      icon: LayoutDashboard,
     },
     {
-      label: "Orders",
-      href: "/item/orders",
-      icon: ListChecks,
-    },
-    {
-      label: "Users",
-      href: "/item/users",
-      icon: User,
+      label: "Reportes",
+      href: "/item/reports",
+      icon: SquareLibrary,
     },
   ],
 };

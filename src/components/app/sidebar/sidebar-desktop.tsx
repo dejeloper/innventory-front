@@ -23,9 +23,11 @@ export function SidebarDesktop({ sidebarItems }: SidebarDesktopProps) {
   return (
     <aside className="w-[270px] max-w-xs h-screen fixed left-0 top-0 z-40 border-r">
       <div className="h-full px-3 py-4 ">
-        <h3 className="mx-3 text-lg font-semibold text-foreground">
-          Innventtory
-        </h3>
+        <Button className="w-full" variant={"ghost"}>
+          <h3 className="mx-3 text-lg font-semibold text-foreground">
+            Innventtory
+          </h3>
+        </Button>
         <div className="mt-5">
           <div className="flex flex-col gap-1 w-full">
             {sidebarItems.links.map((link, index) => (
@@ -69,11 +71,11 @@ export function SidebarDesktop({ sidebarItems }: SidebarDesktopProps) {
                       icon={Settings}
                       className="w-full"
                     >
-                      Account Settings
+                      Configuraciones
                     </SidebarButton>
                   </Link>
                   <SidebarButton size={"sm"} icon={LogOut} className="w-full">
-                    Logout
+                    Salir
                   </SidebarButton>
                 </div>
               </PopoverContent>

@@ -37,9 +37,11 @@ export function SidebarMobile(props: SidebarDesktopProps) {
       </SheetTrigger>
       <SheetContent side={"left"} className="px-3 py-4" hideClose>
         <SheetHeader className="flex flex-row justify-between items-center space-y-0">
-          <span className="text-lg font-semibold text-foreground mx-3">
-            Innventtory
-          </span>
+          <Button variant="ghost">
+            <span className="text-lg font-semibold text-foreground mx-3">
+              Innventtory
+            </span>
+          </Button>
           <SheetClose asChild>
             <Button className="h-7 w-7 p-0" variant="ghost">
               <X size={15} />
@@ -89,11 +91,11 @@ export function SidebarMobile(props: SidebarDesktopProps) {
                       icon={Settings}
                       className="w-full"
                     >
-                      Account Settings
+                      Configuraciones
                     </SidebarButton>
                   </Link>
                   <SidebarButton size={"sm"} icon={LogOut} className="w-full">
-                    Logout
+                    Salir
                   </SidebarButton>
                 </div>
               </DrawerContent>
