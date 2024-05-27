@@ -14,7 +14,25 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Innventtory",
-  description: "Innventtory is a simple inventory management system.",
+  description:
+    "Innventtory es un sistema de inventario y facturación para pequeñas y medianas empresas",
+  openGraph: {
+    title: "Innventtory",
+    description:
+      "Innventtory es un sistema de inventario y facturación para pequeñas y medianas empresas",
+    images: [
+      {
+        url: "https://www.dejeloper.com/images/me_01.jpg",
+        width: 800,
+        height: 600,
+        alt: "Innventtory",
+      },
+    ],
+    url: "https://innventtory.vercel.app/",
+    siteName: "Innventtory",
+    locale: "es_ES",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
