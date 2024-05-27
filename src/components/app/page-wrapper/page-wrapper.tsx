@@ -2,7 +2,7 @@ export function PageWrapper({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main className="mx-5 my-20 sm:ml-[300px] sm:h-[calc(100%-88px)]">
+    <main className="ml-5 mr-0 my-16 sm:ml-[300px] sm:h-[calc(100vh-60px)] overflow-auto">
       {children}
     </main>
   );
