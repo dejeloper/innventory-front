@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useTheme } from "next-themes";
 import { NavbarButton } from "./app/navbar/navbar.button";
 import { Moon, Sun } from "lucide-react";
@@ -10,6 +9,7 @@ export function ModeToggle() {
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
   return (
     <>
       <NavbarButton
