@@ -62,7 +62,9 @@ export function NavbarDropdownButton({
       </DropdownMenuTrigger>
       <DropdownMenuContent className={cn(dropdownMenuContentClassName)}>
         {dropdownMenuLabel && (
-          <DropdownMenuLabel>{dropdownMenuLabel}</DropdownMenuLabel>
+          <DropdownMenuLabel className="border-b-2 border-secondary select-none">
+            {dropdownMenuLabel}
+          </DropdownMenuLabel>
         )}
         {dropdownMenuContent}
       </DropdownMenuContent>
