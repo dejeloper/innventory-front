@@ -18,9 +18,11 @@ export function Navbar() {
     <nav className="fixed top-0 w-full sm:ml-[270px] pl-16 sm:pl-0 h-16 border-b select-none z-0 bg-background">
       <div className="flex h-full sm:w-[calc(100%-278px)] w-[calc(100%-12px)] justify-between items-center">
         <div className="space-x-0">
-          <h3 className="text-2xl font-semibold text-foreground sm:hidden">
-            Innventtory
-          </h3>
+          <Link href={"/"}>
+            <h3 className="text-2xl font-semibold text-foreground sm:hidden">
+              Innventtory
+            </h3>
+          </Link>
           <NavbarSearch classname="hidden sm:flex" />
         </div>
         <div className="flex flex-row justify-center items-center space-x-0 gap-2">
