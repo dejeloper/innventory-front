@@ -14,8 +14,5 @@ export const SidebarExtra = () => (
     >
       Notificaciones
     </SidebarButton>
-    <div className="flex justify-start">
-      <ModeToggle />
-    </div>
   </div>
 );
