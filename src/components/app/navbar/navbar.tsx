@@ -3,8 +3,15 @@
 import { Button } from "@/components/ui/button";
 import { NavbarButton } from "./navbar.button";
 import { NavbarSearch } from "./navbar.search";
-import { Bell, Mail } from "lucide-react";
+import { Bell, CreditCard, Mail, User, UserCheck } from "lucide-react";
 import { ModeToggle } from "@/components/theme-toggle-button";
+import { NavbarDropdownButton } from "./navbar.dropdownbutton";
+import {
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuShortcut,
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export function Navbar() {
   return (
@@ -18,6 +25,27 @@ export function Navbar() {
         </div>
         <div className="flex flex-row justify-center items-center space-x-0 gap-2">
           <div className="flex flex-row gap-1">
+            <NavbarDropdownButton
+              icon={UserCheck}
+              dropdownMenuContent={
+                <>
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                      <User className="mr-2 h-4 w-4" />
+                      <span>Profile</span>
+                      <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <CreditCard className="mr-2 h-4 w-4" />
+                      <span>Billing</span>
+                      <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </>
+              }
+              dropdownMenuContentClassName="w-56"
+              dropdownMenuLabel="Perfil y cuenta"
+            />
             <NavbarButton icon={Bell} />
             <NavbarButton icon={Mail} />
             <ModeToggle />
