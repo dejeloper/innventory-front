@@ -1,17 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { NavbarButton } from "./navbar.button";
 import { NavbarSearch } from "./navbar.search";
-import { Bell, CreditCard, Mail, User, UserCheck } from "lucide-react";
+import { Bell, Mail } from "lucide-react";
 import { ModeToggle } from "@/components/theme-toggle-button";
 import { NavbarDropdownButton } from "./navbar.dropdownbutton";
 import {
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuShortcut,
-} from "@/components/ui/dropdown-menu";
-import Link from "next/link";
+  NavbarDropdownUserContent,
+  NavbarDropdownUserHeader,
+} from "./navbar-dropdown-menu/dropdown.user";
 
 export function Navbar() {
   return (
@@ -20,38 +17,20 @@ export function Navbar() {
         <div className="space-x-0">
           <NavbarSearch classname="hidden sm:flex" />
         </div>
-        <div className="flex flex-row justify-center items-center space-x-0 gap-2">
-          <div className="flex flex-row gap-1">
+        <div className="flex flex-row justify-center items-center gap-1">
+          <NavbarButton icon={Bell} />
+          <NavbarButton icon={Mail} />
+          <ModeToggle />
+          <div className=" flex flex-row h-full justify-center items-center">
             <NavbarDropdownButton
-              icon={UserCheck}
-              dropdownMenuContent={
-                <>
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                      <User className="mr-2 h-4 w-4" />
-                      <span>Profile</span>
-                      <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <CreditCard className="mr-2 h-4 w-4" />
-                      <span>Billing</span>
-                      <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                </>
-              }
+              type="button"
+              buttonVariant="ghost"
+              buttonClassname="flex flex-row justify-center items-center h-10 w-10 p-0 m-0 bg-transparent hover:bg-transparent"
+              buttonContent={<NavbarDropdownUserHeader />}
+              dropdownMenuContent={<NavbarDropdownUserContent />}
               dropdownMenuContentClassName="w-56"
               dropdownMenuLabel="Perfil y cuenta"
             />
-            <NavbarButton icon={Bell} />
-            <NavbarButton icon={Mail} />
-            <ModeToggle />
-          </div>
-
-          <div className="flex flex-row gap-1 justify-center items-center text-center">
-            <Button variant={"secondary"} className="h-10 w-10 rounded-full">
-              <span className="font-semibold">JG</span>
-            </Button>
           </div>
         </div>
       </div>
