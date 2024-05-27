@@ -2,6 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { NavbarButton } from "./navbar.button";
+import { NavbarSearch } from "./navbar.search";
+import { Bell, Mail } from "lucide-react";
+import { ModeToggle } from "@/components/theme-toggle-button";
 
 export function Navbar() {
   return (
@@ -11,10 +14,13 @@ export function Navbar() {
           <h3 className="text-2xl font-semibold text-foreground sm:hidden">
             Innventtory
           </h3>
+          <NavbarSearch classname="hidden sm:flex" />
         </div>
         <div className="flex flex-row justify-center items-center space-x-0 gap-2">
           <div className="flex flex-row gap-1">
-            <NavbarButton />
+            <NavbarButton icon={Bell} />
+            <NavbarButton icon={Mail} />
+            <ModeToggle />
           </div>
 
           <div className="flex flex-row gap-1 justify-center items-center text-center">
