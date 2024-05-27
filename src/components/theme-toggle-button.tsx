@@ -17,27 +17,12 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant={"ghost"} className="w-8 h-8 p-0">
-          {theme === "light" ? (
-            <NavbarButton icon={Sun} />
-          ) : (
-            <NavbarButton icon={Moon} />
-          )}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <>
+      {theme === "light" ? (
+        <NavbarButton icon={Moon} onClick={() => setTheme("dark")} />
+      ) : (
+        <NavbarButton icon={Sun} onClick={() => setTheme("light")} />
+      )}
+    </>
   );
 }
