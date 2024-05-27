@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Innventtory es un sistema de inventario y facturación para pequeñas y medianas empresas",
     images: [
       {
-        url: "https://www.dejeloper.com/images/me_01.jpg",
+        url: "https://innventtory.vercel.app/images/logo_innventtory.jpg",
         width: 800,
         height: 600,
         alt: "Innventtory",
